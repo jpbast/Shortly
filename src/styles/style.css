@@ -165,7 +165,6 @@ h4 {
 }
 
 .navbar {
-    /* margin-top: 30px; */
     display: flex;
     position: relative;
     align-items: center;
@@ -181,6 +180,12 @@ h4 {
     float: right;
     position: absolute;
     right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    display: flex;
     align-items: center;
 }
 
@@ -201,6 +206,7 @@ h4 {
     position: absolute;
     right: 0;
     display: none;
+    cursor: pointer
 }
 
 button {
@@ -233,7 +239,6 @@ button:hover {
     align-items: center;
     margin-top: 40px;
     gap: 6%;
-    /* justify-content: space-between; */
 }
 
 .description-container .button {
@@ -301,8 +306,6 @@ input {
     padding-bottom: 60px;
     background-color: var(--veryDarkViolet);
     display: flex;
-    /* gap: 120px; */
-    /* grid-template-columns: 1fr 2fr 0.5fr; */
     width: 100%;
     justify-content: space-between;
 }
@@ -430,7 +433,6 @@ a img:hover {
         flex-direction: column-reverse;
         margin-top: 0;
         gap: 0;
-        /* justify-content: center; */
         text-align: center;
     }
 
