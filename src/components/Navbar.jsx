@@ -17,10 +17,6 @@ function Navbar() {
   }
 
   useEffect(() => {
-    setFlag(false);
-  }, []);
-
-  useEffect(() => {
     if (size > 830 && flag) {
       setIcon(false);
       setFlag(false);
@@ -28,24 +24,14 @@ function Navbar() {
     if (size <= 830 && !flag) {
       setFlag(true);
     }
-
-    if (icon) {
-      document.querySelector('.navbar ul').style.display = 'flex';
-    } else {
-      if (flag) {
-        document.querySelector('.navbar ul').style.display = 'none';
-      } else {
-        document.querySelector('.navbar ul').style.display = 'flex';
-      }
-    }
-  }, [size, icon]);
+  }, [size]);
 
 
   return (
     <div className="navbar">
       <img src={Logo} alt="Logo"/>
-      <div className={icon ? 'mob-nav-container' : 'nav-container'} >
-        <ul>
+      <div className={icon && flag ? 'mob-nav-container' : 'nav-container'} >
+        <ul style={icon && flag ? {display: 'flex'} : {}}>
           <li>Features</li>
           <li>Pricing</li>
           <li>Resources</li>
