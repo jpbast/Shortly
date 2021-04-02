@@ -5,7 +5,7 @@ import '../styles/MenuNavigation.css';
 
 function Navbar() {
   const [icon, setIcon] = useState(false);
-  const [size, setSize] = useState(1080);
+  const [size, setSize] = useState(1);
   const [flag, setFlag] = useState(true);
 
   window.addEventListener('resize', () => {
@@ -15,6 +15,10 @@ function Navbar() {
   function handleIcon() {
     setIcon(!icon);
   }
+
+  useEffect(() => {
+    setFlag(false);
+  }, []);
 
   useEffect(() => {
     if (size > 830 && flag) {
