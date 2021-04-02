@@ -14,6 +14,11 @@ function Navbar() {
         <span>Login</span>
         <button>Sign Up</button>
       </div>
+      <div className="menu-icon-container">
+        <div className="menu-icon"></div>
+        <div className="menu-icon"></div>
+        <div className="menu-icon"></div>
+      </div>
     </div>
   );
 }
