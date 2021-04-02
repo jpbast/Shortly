@@ -1,0 +1,37 @@
+.mob-nav-container {
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  margin-top: 380px;
+  z-index: 10;
+  text-align: center;
+  padding: 25px 15px 25px 15px;
+  color: white;
+}
+
+.mob-nav-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.mob-nav-container ul li:hover, .login span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+  }
+
+.mob-nav-container .login {
+  border-style: solid none none none;
+  border-width: 1px;
+  border-color: rgb(158, 154, 167, 0.6);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mob-nav-container div button {
+  width: 100%;
+}
