@@ -11,7 +11,7 @@ function Description() {
         <button>Get Started</button>
       </div>
       <div className="ilustration-work">
-        <img width="800px" src={ilustrationWorking} alt="Ilustration work"/>
+        <img width="100%" src={ilustrationWorking} alt="Ilustration work"/>
       </div>
     </div>
   );

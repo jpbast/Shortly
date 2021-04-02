@@ -8,7 +8,9 @@ import Facebook from '../assets/images/icon-facebook.svg';
 function Footer() {
   return (
     <div className="container footer">
-      <img src={ Logo } className="svg-color" />
+      <div>
+        <img src={ Logo } className="svg-color" />
+      </div>
       <ul className="footer-ul">
         <ul className="footer-li">
           <li>Features</li>

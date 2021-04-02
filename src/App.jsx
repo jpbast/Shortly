@@ -11,8 +11,8 @@ function App() {
     <div>
       <div className="container bg-white">
         <Navbar />
-        <Description />
       </div>
+      <Description />
       <div className="container-shorten bg-white-gray">
         <ShortenLink />
       </div>
