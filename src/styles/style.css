@@ -222,6 +222,10 @@ button {
     display: block;
 }
 
+button:focus {
+    outline: none;
+}
+
 button:hover {
     background-color: hsl(180, 66%, 33%);
 }
@@ -273,6 +277,7 @@ button:hover {
     justify-content: center;
     gap: 30px;
     box-sizing: border-box;
+    position: relative;
 }
 
 input {
@@ -285,6 +290,11 @@ input {
     font-weight: inherit;
     color: var(--grayishViolet);
 }
+
+input:focus {
+    outline: none;
+}
+
 
 .getStarted-container {
     display: flex;
