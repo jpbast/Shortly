@@ -4,11 +4,11 @@ O Shortly é uma aplicação onde é possível reduzir um endereço web. O proje
 
 Link para a minha solução: https://shortly-jpbast.herokuapp.com/
 
-OBS: Ainda falta conectar com a API que encurta os links.
+OBS: Ainda falta tornar responsivo a lista de links para dispositivos mobile.
 
 ## Funcionamento
 
-O aplicativo possui fácil funcionamento. Basta adicionar no campo correto um link que deseja encurtar (ainda não está funcionando).
+O aplicativo possui fácil funcionamento. Basta adicionar no campo correto um link que deseja encurtar.
 É possível acessá-lo em qualquer dispositivo, tendo em vista que está totalmente responsivo.
 
 ## Objetivo
