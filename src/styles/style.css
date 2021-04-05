@@ -220,6 +220,7 @@ button {
     font-family: inherit;
     font-weight: inherit;
     display: block;
+    box-sizing: border-box;
 }
 
 button:focus {
