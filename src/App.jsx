@@ -13,9 +13,7 @@ function App() {
         <Navbar />
       </div>
       <Description />
-      <div className="">
-        <ShortenLink />
-      </div>
+      <ShortenLink />
       <div className="bg-gray">
         <Features />
       </div>

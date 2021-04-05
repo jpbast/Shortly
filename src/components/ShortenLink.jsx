@@ -17,6 +17,7 @@ function ShortenLink() {
 
   function handleClick(event) {
     const newLink = event.target.parentNode.firstChild.value;
+    event.target.parentNode.firstChild.value = '';
     if (!newLink) {
       alert('You must add a link');
       setIsLink(false);
