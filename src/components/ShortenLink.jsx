@@ -1,19 +1,13 @@
 /* eslint-disable max-len */
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {LoadingContext} from '../contexts/LoadingContext';
 import shrtcoApi from '../services/shrtcodeApi';
 import Links from './Links.jsx';
-// import styled from 'styled-components';
 
 function ShortenLink() {
-  // const IsLink = styled.div`
-  //   color: red;
-  //   position: absolute;
-  //   left: 60px;
-  //   bottom: 20px;
-  // `;
-
   const [links, setLinks] = useState([]);
-  // const [isLink, setIsLink] = useState(true);
+  const loadingCtx = useContext(LoadingContext);
+  const setLoading = loadingCtx[1];
 
   function handleClick(event) {
     const newLink = event.target.parentNode.firstChild.value;
@@ -23,7 +17,6 @@ function ShortenLink() {
       setIsLink(false);
       return;
     };
-    // setIsLink(true);
     shortenLink(newLink);
   }
 
@@ -35,9 +28,12 @@ function ShortenLink() {
         url: newLink,
       },
     };
+
+    setLoading(true);
     const res = await shrtcoApi(options)
         .then((res) => res.data.result)
         .catch((err) => alert(`Error: ${err}`));
+    setLoading(false);
     setLinks([...links, {link: newLink, short_link: res.short_link}]);
     console.log(res.short_link);
   }
@@ -46,12 +42,7 @@ function ShortenLink() {
     <div>
       <div className="container-shorten bg-white-gray">
         <div className="shorten">
-          {/* <div> */}
           <input type="text" placeholder="Shorten a link here..."/>
-          {/* {!isLink && (
-              <IsLink>Please add a link</IsLink>
-            )} */}
-          {/* </div> */}
           <button onClick={handleClick} className="button-shortenlink">Shorten It!</button>
         </div>
 
